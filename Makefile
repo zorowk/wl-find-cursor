@@ -18,11 +18,10 @@ headers:
 	wayland-scanner public-code /usr/share/wayland-protocols/stable/viewporter/viewporter.xml tmp/viewporter.c
 
 
-install: default
+install:
 	mkdir -p $(DESTDIR)/$(PREFIX)/bin
 	install -m0755 wl-find-cursor $(DESTDIR)/$(PREFIX)/bin/
 
 clean:
 	rm -f wl-find-cursor
-	rm -rf ./tmp 
-
+	rm -rf ./tmp
